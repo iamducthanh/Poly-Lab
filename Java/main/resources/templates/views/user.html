@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div th:if="${messenge}" class="alert alert-success">[[${messenge}]]</div>
+<div class="container-fluid text-center">
+    <h1>Danh sách user</h1>
+    <a class="h2" th:href="@{/user}">Manage User</a>
+    <br/>
+    <a class="btn btn-primary" th:href="@{'/user/add'}">Add User</a>
+    <table class="table table-bordered text-left">
+        <thead class="thead-dark">
+        <th>Email</th>
+        <th>Fullname</th>
+        <th>Password</th>
+        <th>Active</th>
+        <th>Role</th>
+        <th>action</th>
+        </thead>
+        <tbody>
+        <th:block th:each="user : ${users}">
+            <tr>
+                <td>[[${user.fullname}]]</td>
+                <td>[[${user.email}]]</td>
+                <td>[[${user.password}]]</td>
+                <td>[[${user.active}]]</td>
+                <td>[[${user.role}]]</td>
+                <td>
+                    <a th:href="@{'/user/edit/' + ${user.id}}" class="btn btn-primary">Edit</a>
+                    <a th:href="@{'/user/remove/' + ${user.id}}" class="btn btn-danger">Remove</a>
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

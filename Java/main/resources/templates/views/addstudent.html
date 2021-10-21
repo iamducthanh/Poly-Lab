@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/weblayout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">Thêm sinh viên</title>
+</head>
+<body layout:fragment="content">
+    <form class="border" style="width: 300px; margin: 0 auto" action="/student/create" method="post" th:object="${student}">
+        <input class="form-control m-1" type="text" th:field="*{name}" name="name">
+        <input class="form-control m-1" type="text" name="age" th:field="*{age}">
+        <button class="btn btn-primary">Create</button>
+    </form>
+</body>
+</html>

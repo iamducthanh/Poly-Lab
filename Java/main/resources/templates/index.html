@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/weblayout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">Trang chủ index</title>
+</head>
+<body>
+<div class="container-fluid text-center" layout:fragment="content">
+    <h1>Đây là content ok</h1>
+    <h1>[[${eeee}]]</h1>
+    <button class="btn btn-danger">Test bootstrap bên layout</button>
+    <script>
+        console.log(localStorage.getItem('TESTLO'))
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+http://localhost:8080/web_movie_war_exploded/nap-thanh-cong?
+vnp_Amount=100000000
+&
+vnp_BankCode
+=
+NCB&vnp_BankTranNo=20211006194253&
+vnp_CardType=ATM&
+vnp_OrderInfo=Chuyen+tien&vnp_PayDate=20211006194243&
+
+vnp_ResponseCode=  00
+
+&vnp_TmnCode=9HYUAVCC&vnp_TransactionNo=13598547&vnp_TxnRef=04348713&vnp_SecureHashType=SHA256&vnp_SecureHash=e17415396d11815dda0180dcf13f7a850608f17955b39f86b62f956d9e60ba60
